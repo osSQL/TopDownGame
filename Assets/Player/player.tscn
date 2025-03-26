@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://br6g1oty181af"]
+[gd_scene load_steps=19 format=3 uid="uid://br6g1oty181af"]
 
 [ext_resource type="Texture2D" uid="uid://c7v42viefr56j" path="res://Assets/Player/Spritesheets/Hurt.png" id="1_5j20w"]
 [ext_resource type="Texture2D" uid="uid://cpoarfhca0mo7" path="res://Assets/Player/Spritesheets/Idle.png" id="1_61lih"]
+[ext_resource type="Script" uid="uid://dim0x7apjfdcb" path="res://Assets/Player/player.gd" id="1_aqk3a"]
 [ext_resource type="Texture2D" uid="uid://be8en5mk6dvjq" path="res://Assets/Player/Spritesheets/Jump.png" id="3_aqk3a"]
 [ext_resource type="Texture2D" uid="uid://c3vxiosc7ygwp" path="res://Assets/Player/Spritesheets/Fall.png" id="4_rul8u"]
 [ext_resource type="Texture2D" uid="uid://bv4aibb6su7w4" path="res://Assets/Player/Spritesheets/Land.png" id="5_kg0wl"]
@@ -107,13 +108,14 @@ animations = [{
 size = Vector2(21, 12)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_aqk3a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_aqk3a")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.425763
+frame_progress = 0.186063
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -6)
