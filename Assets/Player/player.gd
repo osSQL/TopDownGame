@@ -9,10 +9,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var movement = movement_vector()
-	var direction = movement.normalized()
+	var direction = movement_vector().normalized()
 	velocity = max_speed *  direction
 	move_and_slide()
+	
 
 
 func movement_vector():
