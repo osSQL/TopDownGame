@@ -1,8 +1,8 @@
 [gd_scene load_steps=22 format=3 uid="uid://bl8b1afqg0chq"]
 
-[ext_resource type="Texture2D" uid="uid://do4sgjm6lssat" path="res://Assets/Skeleton/enemies-skeleton2_idle.png" id="1_3vwuc"]
-[ext_resource type="Script" uid="uid://cdq46xw4qg1em" path="res://Assets/Skeleton/skeleton.gd" id="1_o3o0b"]
-[ext_resource type="Texture2D" uid="uid://dfydc0uus5y1e" path="res://Assets/Skeleton/enemies-skeleton2_movemen.png" id="2_o3o0b"]
+[ext_resource type="Texture2D" uid="uid://do4sgjm6lssat" path="res://assets/skeleton/enemies-skeleton2_idle.png" id="1_3vwuc"]
+[ext_resource type="Script" uid="uid://cdq46xw4qg1em" path="res://assets/skeleton/skeleton.gd" id="1_o3o0b"]
+[ext_resource type="Texture2D" uid="uid://dfydc0uus5y1e" path="res://assets/skeleton/enemies-skeleton2_movemen.png" id="2_o3o0b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rmxe"]
 atlas = ExtResource("1_3vwuc")

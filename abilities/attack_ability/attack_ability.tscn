@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjqiy0sp1uc31"]
+
+[ext_resource type="Texture2D" uid="uid://tu7vlqmvs02j" path="res://abilities/fc1713.png" id="1_6d8u7"]
+
+[node name="AttackAbility" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.0277521, -12.9948)
+rotation = -0.785398
+scale = Vector2(0.381779, 0.380552)
+texture = ExtResource("1_6d8u7")

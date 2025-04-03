@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=4 uid="uid://cnwa7rhhje7na"]
 
-[ext_resource type="TileSet" uid="uid://36hmw03hhtca" path="res://Assets/level/level.tres" id="1_hi4i5"]
-[ext_resource type="PackedScene" uid="uid://br6g1oty181af" path="res://Assets/Player/player.tscn" id="2_f4kgh"]
-[ext_resource type="PackedScene" uid="uid://bl8b1afqg0chq" path="res://Assets/Skeleton/skeleton.tscn" id="3_6jpj3"]
+[ext_resource type="TileSet" uid="uid://36hmw03hhtca" path="res://assets/level/level.tres" id="1_hi4i5"]
+[ext_resource type="PackedScene" uid="uid://br6g1oty181af" path="res://assets/player/player.tscn" id="2_f4kgh"]
+[ext_resource type="PackedScene" uid="uid://bl8b1afqg0chq" path="res://assets/skeleton/skeleton.tscn" id="3_6jpj3"]
 
 [node name="Level" type="Node"]
 

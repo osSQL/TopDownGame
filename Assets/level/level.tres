@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://36hmw03hhtca"]
 
-[ext_resource type="Texture2D" uid="uid://clwgca88385ut" path="res://Assets/Other/decorative.png" id="1_q2y4l"]
-[ext_resource type="Texture2D" uid="uid://ci7u8vme45fv4" path="res://Assets/Other/mainlevbuild.png" id="2_sqvcx"]
+[ext_resource type="Texture2D" uid="uid://clwgca88385ut" path="res://assets/other/decorative.png" id="1_6pm7n"]
+[ext_resource type="Texture2D" uid="uid://ci7u8vme45fv4" path="res://assets/other/mainlevbuild.png" id="2_3f72u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4kgh"]
-texture = ExtResource("1_q2y4l")
+texture = ExtResource("1_6pm7n")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -130,7 +130,7 @@ texture = ExtResource("1_q2y4l")
 2:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6jpj3"]
-texture = ExtResource("2_sqvcx")
+texture = ExtResource("2_3f72u")
 40:0/0 = 0
 41:0/0 = 0
 42:0/0 = 0
