@@ -133,7 +133,7 @@ animations = [{
 radius = 5.0
 height = 14.0
 
-[node name="Skeleton" type="CharacterBody2D"]
+[node name="Skeleton" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 0
 script = ExtResource("1_o3o0b")
 

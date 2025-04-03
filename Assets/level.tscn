@@ -16,3 +16,6 @@ position = Vector2(116, 196)
 
 [node name="Skeleton" parent="." instance=ExtResource("3_6jpj3")]
 position = Vector2(236, 112)
+
+[node name="Skeleton2" parent="." instance=ExtResource("3_6jpj3")]
+position = Vector2(335, 27)
