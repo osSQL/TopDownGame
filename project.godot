@@ -15,9 +15,14 @@ run/main_scene="uid://cnwa7rhhje7na"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://game_objects/global/global.tscn"
+
 [debug]
 
 gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
 
 [display]
 
