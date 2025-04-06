@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cnwa7rhhje7na"]
+[gd_scene load_steps=7 format=4 uid="uid://cnwa7rhhje7na"]
 
 [ext_resource type="TileSet" uid="uid://36hmw03hhtca" path="res://level/level.tres" id="1_hi4i5"]
 [ext_resource type="PackedScene" uid="uid://cnf2t1hwy02y" path="res://UI/arena_time_ui.tscn" id="1_hknuy"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://br6g1oty181af" path="res://game_objects/player/player.tscn" id="2_f4kgh"]
 [ext_resource type="PackedScene" uid="uid://b635ungiboeke" path="res://manager/arena_time_manager.tscn" id="2_varia"]
 [ext_resource type="PackedScene" uid="uid://bp81riv8ly6k1" path="res://manager/experience_manager.tscn" id="3_ivpvi"]
-[ext_resource type="PackedScene" uid="uid://bojuhqirsm1x4" path="res://game_objects/exp_bottle/exp_bottle.tscn" id="6_44x8d"]
 
 [node name="Level" type="Node"]
 
@@ -26,12 +25,3 @@ tile_set = ExtResource("1_hi4i5")
 
 [node name="Player" parent="." instance=ExtResource("2_f4kgh")]
 position = Vector2(116, 196)
-
-[node name="exp_bottle" parent="." instance=ExtResource("6_44x8d")]
-position = Vector2(241, 116)
-
-[node name="exp_bottle2" parent="." instance=ExtResource("6_44x8d")]
-position = Vector2(133, 62)
-
-[node name="exp_bottle3" parent="." instance=ExtResource("6_44x8d")]
-position = Vector2(27, 92)

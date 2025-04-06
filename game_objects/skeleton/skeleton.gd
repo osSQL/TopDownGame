@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 var speed = 50
 
+@onready var health_component = $health_component
+
+
 
 func _process(delta):
 	var direction = get_direction_to_player()
@@ -16,4 +19,4 @@ func get_direction_to_player():
 
 
 func _on_area_2d_area_entered(area):
-	queue_free() 
+	health_component.take_damage(5)
