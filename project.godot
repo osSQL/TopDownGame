@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://game_objects/global/global.tscn"
+Global="*res://Main/game_objects/global/global.tscn"
 
 [debug]
 
