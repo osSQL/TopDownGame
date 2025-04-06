@@ -3,6 +3,7 @@ extends Node
 @export var attack_ability: PackedScene
 
 var attack_range = 300 
+var sword_damage = 5
 
 func _on_timer_timeout():
 	var player = get_tree().get_first_node_in_group("player") as Node2D
@@ -28,8 +29,9 @@ func _on_timer_timeout():
 	
 	var enemy_pos = enemies[0].global_position
 	
-	var attack_instance = attack_ability.instantiate() as Node2D
+	var attack_instance = attack_ability.instantiate() as AttackAbility
 	player.get_parent().add_child(attack_instance)
+	attack_instance.hit_box_component.damage = sword_damage
 	
 	
 	attack_instance.global_position = (enemy_pos + player_pos) / 2
