@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://br6g1oty181af"]
+[gd_scene load_steps=25 format=3 uid="uid://br6g1oty181af"]
 
 [ext_resource type="Texture2D" uid="uid://c7v42viefr56j" path="res://Main/game_objects/player/Spritesheets/Hurt.png" id="1_5j20w"]
 [ext_resource type="Texture2D" uid="uid://cpoarfhca0mo7" path="res://Main/game_objects/player/Spritesheets/Idle.png" id="1_61lih"]
@@ -8,6 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://dvgkrqhywywp1" path="res://Main/components/health_component.tscn" id="3_pwb87"]
 [ext_resource type="Texture2D" uid="uid://c3vxiosc7ygwp" path="res://Main/game_objects/player/Spritesheets/Fall.png" id="4_rul8u"]
 [ext_resource type="Texture2D" uid="uid://bv4aibb6su7w4" path="res://Main/game_objects/player/Spritesheets/Land.png" id="5_kg0wl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwb87"]
+bg_color = Color(0.0313726, 0.101961, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjtct"]
+bg_color = Color(0.756863, 0, 0.176471, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0304329, 0.102848, 0.0302005, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wktog"]
 radius = 32.0
@@ -128,7 +139,21 @@ script = ExtResource("1_aqk3a")
 [node name="GracePeriod" type="Timer" parent="."]
 one_shot = true
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(25, 4)
+offset_left = -12.0
+offset_top = 3.0
+offset_right = 12.0
+offset_bottom = 7.0
+pivot_offset = Vector2(12, 2)
+theme_override_styles/background = SubResource("StyleBoxFlat_pwb87")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qjtct")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
 [node name="PickUpBottles" type="Area2D" parent="."]
+visible = false
 collision_layer = 8
 collision_mask = 0
 
@@ -147,9 +172,6 @@ frame_progress = 0.186063
 position = Vector2(0.5, -6)
 shape = SubResource("RectangleShape2D_rul8u")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
-
 [node name="PlayerHurtBox" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 16
@@ -158,5 +180,6 @@ collision_mask = 16
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_qjtct")
 
+[connection signal="timeout" from="GracePeriod" to="." method="_on_grace_period_timeout"]
 [connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]
 [connection signal="area_exited" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_exited"]
