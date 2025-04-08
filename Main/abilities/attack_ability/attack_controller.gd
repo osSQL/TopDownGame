@@ -4,7 +4,7 @@ extends Node
 @onready var timer = $Timer
  
 var attack_range = 300 
-var sword_damage = 10
+var sword_damage = 5
 var default_attack_speed
 
 func _ready():
