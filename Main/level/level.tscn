@@ -28,7 +28,8 @@ experience_manager = NodePath("../experience_manager")
 
 [node name="experience_manager" parent="." instance=ExtResource("3_ivpvi")]
 
-[node name="enemy_spawner" parent="." instance=ExtResource("1_nxdho")]
+[node name="enemy_spawner" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_nxdho")]
+arena_time_manager = NodePath("../ArenaTimeManager")
 
 [node name="UpgradeManager" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("6_0v1st")]
 experience_manager = NodePath("../experience_manager")

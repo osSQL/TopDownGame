@@ -1,8 +1,14 @@
 extends Node
+class_name ArenaTimeManager
+
+signal difficulty_increased(difficulty_level: int)
 
 @export var end_screen_scene: PackedScene
 
 @onready var timer = $Timer
+@onready var difficulty_timer = $DifficultyTimer
+
+var difficulty_level: int = 0
 
 
 func get_time_elapsed():
@@ -16,4 +22,7 @@ func _on_timer_timeout():
 	get_parent().add_child(end_screne_instance)
 	end_screne_instance.change_to_victory()
 	
-	
+
+func _on_difficulty_timer_timeout():
+	difficulty_level += 1
+	difficulty_increased.emit(difficulty_level)
