@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bp6wldgp80xux"]
+
+[ext_resource type="PackedScene" uid="uid://6bc7vib2dx5v" path="res://Main/abilities/axe_ability/axe_ability_controller.tscn" id="1_wwgqf"]
+[ext_resource type="Script" uid="uid://d12w4a0co7a7n" path="res://resources/upgrades/new_ability.gd" id="2_ilx6a"]
+
+[resource]
+script = ExtResource("2_ilx6a")
+new_ability_scene = ExtResource("1_wwgqf")
+id = "throw_axe "
+name = "Топор"
+description = "Добавляет крутящийся топор"
