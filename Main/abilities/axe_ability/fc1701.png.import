@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tu7vlqmvs02j"
-path="res://.godot/imported/fc1713.png-c51c16b7bb8cdef68880cb6c0b3e3921.ctex"
+uid="uid://gntnc87ssrc"
+path="res://.godot/imported/fc1701.png-57fb6937cd40ad667f3f2311baa739dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main/abilities/fc1713.png"
-dest_files=["res://.godot/imported/fc1713.png-c51c16b7bb8cdef68880cb6c0b3e3921.ctex"]
+source_file="res://Main/abilities/axe_ability/fc1701.png"
+dest_files=["res://.godot/imported/fc1701.png-57fb6937cd40ad667f3f2311baa739dd.ctex"]
 
 [params]
 

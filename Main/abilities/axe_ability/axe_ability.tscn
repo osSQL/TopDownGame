@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7bi5of8klwtf"]
+
+[ext_resource type="Script" uid="uid://bgyjs2tekin7o" path="res://Main/abilities/axe_ability/axe_ability.gd" id="1_fwk24"]
+[ext_resource type="Texture2D" uid="uid://gntnc87ssrc" path="res://Main/abilities/axe_ability/fc1701.png" id="1_kaf0n"]
+[ext_resource type="PackedScene" uid="uid://bpju36nnatnfk" path="res://Main/components/hit_box_component.tscn" id="3_eytsh"]
+
+[sub_resource type="Animation" id="Animation_eytsh"]
+resource_name = "new_animation"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.785528, 5.49779]
+}
+
+[sub_resource type="Animation" id="Animation_vt2sq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.785528]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cw26w"]
+_data = {
+&"RESET": SubResource("Animation_vt2sq"),
+&"new_animation": SubResource("Animation_eytsh")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vt2sq"]
+radius = 13.0384
+
+[node name="AxeAbility" type="Node2D"]
+script = ExtResource("1_fwk24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cw26w")
+}
+autoplay = "new_animation"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 0.02)
+rotation = -0.785528
+scale = Vector2(0.382, 0.382)
+texture = ExtResource("1_kaf0n")
+
+[node name="HitBoxComponent" parent="." instance=ExtResource("3_eytsh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_vt2sq")

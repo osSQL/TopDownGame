@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cjqiy0sp1uc31"]
 
-[ext_resource type="Texture2D" uid="uid://tu7vlqmvs02j" path="res://Main/abilities/fc1713.png" id="1_6d8u7"]
+[ext_resource type="Texture2D" uid="uid://tu7vlqmvs02j" path="res://Main/abilities/attack_ability/fc1713.png" id="1_6d8u7"]
 [ext_resource type="Script" uid="uid://wrilxbfchn3n" path="res://Main/abilities/attack_ability/attack_ability.gd" id="1_k8wjv"]
 [ext_resource type="PackedScene" uid="uid://bpju36nnatnfk" path="res://Main/components/hit_box_component.tscn" id="2_7vo6h"]
 
