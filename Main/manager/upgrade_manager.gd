@@ -24,10 +24,16 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 	
 	Global.ability_upgrade_added.emit(upgrade, current_upgrades)
 	
+	if upgrade.max_quantity > 0:
+		var current_quantity = current_upgrades[upgrade.id]["quantity"]
+		if current_quantity == upgrade.max_quantity:
+			upgrade_pool = upgrade_pool.filter(func(pool_upgrade): return pool_upgrade.id != upgrade.id)
 func pick_upgrades():
 	var choosen_upgrades: Array[AbilityUpgrade]
 	var pool_copy = upgrade_pool.duplicate()
 	for i in 2:
+		if pool_copy.size() == 0:
+			break
 		var choosen_upgrade = pool_copy.pick_random() as AbilityUpgrade
 		choosen_upgrades.append(choosen_upgrade)
 		pool_copy = pool_copy.filter(func(upgrade): return upgrade.id != choosen_upgrade.id)
