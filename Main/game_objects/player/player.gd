@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var grace_period = $GracePeriod
 @onready var progress_bar = $ProgressBar
 @onready var ability_manager = $ability_manager
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 
 
@@ -24,6 +25,14 @@ func _process(delta):
 	velocity = velocity.lerp(targer_velocity,acceleration)
 	move_and_slide()
 	
+	if direction.x != 0 || direction.y != 0:
+		animated_sprite_2d.play("run")
+	else:
+		animated_sprite_2d.play("idle")
+	
+	var face_sign = sign(direction.x)
+	if face_sign != 0:
+		animated_sprite_2d.scale.x = face_sign
 
 
 func movement_vector():
