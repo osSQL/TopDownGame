@@ -1,10 +1,11 @@
-[gd_scene load_steps=41 format=3 uid="uid://bkhi5042dqbw1"]
+[gd_scene load_steps=42 format=3 uid="uid://bkhi5042dqbw1"]
 
 [ext_resource type="Script" uid="uid://cdq46xw4qg1em" path="res://Main/game_objects/skeleton/skeleton.gd" id="1_es2ux"]
 [ext_resource type="PackedScene" uid="uid://dvgkrqhywywp1" path="res://Main/components/health_component.tscn" id="2_xcg5j"]
 [ext_resource type="PackedScene" uid="uid://dbgdsl3rlrs7h" path="res://Main/components/exp_bottle_drop_component.tscn" id="3_6677y"]
 [ext_resource type="PackedScene" uid="uid://csrrej3tbdalu" path="res://Main/components/movement_component.tscn" id="3_xaers"]
 [ext_resource type="PackedScene" uid="uid://dcr3l8rmd6ysm" path="res://Main/components/hurt_box_component.tscn" id="4_r5exc"]
+[ext_resource type="PackedScene" uid="uid://cyx3f1l7rwe3l" path="res://Main/components/flash_component.tscn" id="5_bju7f"]
 [ext_resource type="Texture2D" uid="uid://cdj1k6jbif8go" path="res://Main/game_objects/vampire/enemies-vampire_death.png" id="5_g8ket"]
 [ext_resource type="Texture2D" uid="uid://qjm47h0dinrc" path="res://Main/game_objects/vampire/enemies-vampire_idle.png" id="6_xaers"]
 [ext_resource type="Texture2D" uid="uid://cyaji5kip8ttg" path="res://Main/game_objects/vampire/enemies-vampire_movement.png" id="7_bju7f"]
@@ -243,6 +244,10 @@ script = ExtResource("1_es2ux")
 
 [node name="exp_bottle_drop_component" parent="." node_paths=PackedStringArray("hp_component") instance=ExtResource("3_6677y")]
 hp_component = NodePath("../health_component")
+
+[node name="FlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_bju7f")]
+health_component = NodePath("../health_component")
+sprite = NodePath("../AnimatedSprite2D")
 
 [node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_r5exc")]
 health_component = NodePath("../health_component")

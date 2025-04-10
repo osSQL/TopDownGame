@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://xobtes744nvf"]
+
+[ext_resource type="Shader" uid="uid://03n7mghr7tfs" path="res://Main/components/flash_component.gdshader" id="1_8x0wk"]
+
+[resource]
+shader = ExtResource("1_8x0wk")
+shader_parameter/percent = 0.0

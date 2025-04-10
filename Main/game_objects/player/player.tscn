@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://br6g1oty181af"]
+[gd_scene load_steps=26 format=3 uid="uid://br6g1oty181af"]
 
 [ext_resource type="Texture2D" uid="uid://c7v42viefr56j" path="res://Main/game_objects/player/Spritesheets/Hurt.png" id="1_5j20w"]
 [ext_resource type="Texture2D" uid="uid://cpoarfhca0mo7" path="res://Main/game_objects/player/Spritesheets/Idle.png" id="1_61lih"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://uklthf3tqr60" path="res://Main/abilities/attack_ability/attack_controller.tscn" id="2_tb4ck"]
 [ext_resource type="Texture2D" uid="uid://be8en5mk6dvjq" path="res://Main/game_objects/player/Spritesheets/Jump.png" id="3_aqk3a"]
 [ext_resource type="PackedScene" uid="uid://dvgkrqhywywp1" path="res://Main/components/health_component.tscn" id="3_pwb87"]
+[ext_resource type="PackedScene" uid="uid://cyx3f1l7rwe3l" path="res://Main/components/flash_component.tscn" id="4_qjtct"]
 [ext_resource type="Texture2D" uid="uid://c3vxiosc7ygwp" path="res://Main/game_objects/player/Spritesheets/Fall.png" id="4_rul8u"]
 [ext_resource type="Texture2D" uid="uid://bv4aibb6su7w4" path="res://Main/game_objects/player/Spritesheets/Land.png" id="5_kg0wl"]
 
@@ -135,6 +136,10 @@ script = ExtResource("1_aqk3a")
 [node name="AttackController" parent="ability_manager" instance=ExtResource("2_tb4ck")]
 
 [node name="health_component" parent="." instance=ExtResource("3_pwb87")]
+
+[node name="FlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_qjtct")]
+health_component = NodePath("../health_component")
+sprite = NodePath("../AnimatedSprite2D")
 
 [node name="GracePeriod" type="Timer" parent="."]
 one_shot = true
