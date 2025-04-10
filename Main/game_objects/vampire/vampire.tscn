@@ -170,7 +170,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
-"speed": 10.0
+"speed": 60.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -256,6 +256,8 @@ position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_7q3pk")
 animation = &"death"
 autoplay = "idle"
+frame = 13
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -7)
