@@ -32,6 +32,10 @@ window/size/window_width_override=905
 window/size/window_height_override=505
 window/stretch/mode="viewport"
 
+[gui]
+
+theme/custom="uid://da7e1l8i6fcwq"
+
 [input]
 
 move_right={

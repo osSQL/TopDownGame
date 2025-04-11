@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://da7e1l8i6fcwq"]
+
+[ext_resource type="Texture2D" uid="uid://dg14uqwol4kfc" path="res://assets/theme/HotkeyBox_34x34.png" id="1_bem6d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7jpm8"]
+texture = ExtResource("1_bem6d")
+texture_margin_left = 5.07628
+texture_margin_top = 7.11367
+texture_margin_right = 5.79988
+texture_margin_bottom = 6.61117
+region_rect = Rect2(-0.0709019, -0.0715466, 34.0463, 33.8357)
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_7jpm8")
