@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://cclwwf38uwjso"]
+
+[ext_resource type="Script" uid="uid://bjxwitrsbn807" path="res://resources/upgrades/ability_upgrade.gd" id="1_bxluk"]
+
+[resource]
+script = ExtResource("1_bxluk")
+id = "axe_damage"
+max_quantity = 0
+name = "Axe Damage"
+description = " Увеличивает урон топора на 12%."
