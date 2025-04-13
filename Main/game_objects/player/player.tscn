@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://br6g1oty181af"]
+[gd_scene load_steps=25 format=3 uid="uid://br6g1oty181af"]
 
 [ext_resource type="Texture2D" uid="uid://c7v42viefr56j" path="res://Main/game_objects/player/Spritesheets/Hurt.png" id="1_5j20w"]
 [ext_resource type="Texture2D" uid="uid://cpoarfhca0mo7" path="res://Main/game_objects/player/Spritesheets/Idle.png" id="1_61lih"]
@@ -9,9 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cyx3f1l7rwe3l" path="res://Main/components/flash_component.tscn" id="4_qjtct"]
 [ext_resource type="Texture2D" uid="uid://c3vxiosc7ygwp" path="res://Main/game_objects/player/Spritesheets/Fall.png" id="4_rul8u"]
 [ext_resource type="Texture2D" uid="uid://bv4aibb6su7w4" path="res://Main/game_objects/player/Spritesheets/Land.png" id="5_kg0wl"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwb87"]
-bg_color = Color(0.0313726, 0.101961, 0.0313726, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjtct"]
 bg_color = Color(0.756863, 0, 0.176471, 1)
@@ -151,7 +148,6 @@ offset_top = 3.0
 offset_right = 12.0
 offset_bottom = 7.0
 pivot_offset = Vector2(12, 2)
-theme_override_styles/background = SubResource("StyleBoxFlat_pwb87")
 theme_override_styles/fill = SubResource("StyleBoxFlat_qjtct")
 max_value = 1.0
 value = 0.5

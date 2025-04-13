@@ -6,5 +6,5 @@
 script = ExtResource("1_bxluk")
 id = "axe_damage"
 max_quantity = 0
-name = "Axe Damage"
+name = "Урон Топора"
 description = " Увеличивает урон топора на 12%."

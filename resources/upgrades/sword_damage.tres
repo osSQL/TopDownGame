@@ -6,5 +6,5 @@
 script = ExtResource("1_04we8")
 id = "sword_damage"
 max_quantity = 0
-name = "Sword Damage"
+name = "Урон Меча"
 description = "Увеличивает урон меча на 15%."

@@ -1,6 +1,19 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://da7e1l8i6fcwq"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://da7e1l8i6fcwq"]
 
 [ext_resource type="Texture2D" uid="uid://dg14uqwol4kfc" path="res://assets/theme/HotkeyBox_34x34.png" id="1_bem6d"]
+[ext_resource type="Texture2D" uid="uid://ciq5qoy405qk" path="res://assets/theme/Button_52x14.png" id="2_7jpm8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_leisi"]
+texture = ExtResource("2_7jpm8")
+texture_margin_top = 2.94314
+texture_margin_bottom = 2.61613
+region_rect = Rect2(1.96064, 0, 48.0535, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sd4jv"]
+texture = ExtResource("2_7jpm8")
+texture_margin_top = 2.94314
+texture_margin_bottom = 2.61613
+region_rect = Rect2(1.96064, 0, 48.0535, 14)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7jpm8"]
 texture = ExtResource("1_bem6d")
@@ -10,5 +23,24 @@ texture_margin_right = 5.79988
 texture_margin_bottom = 6.61117
 region_rect = Rect2(-0.0709019, -0.0715466, 34.0463, 33.8357)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d6481"]
+texture = ExtResource("2_7jpm8")
+texture_margin_left = 5.1372
+texture_margin_top = 2.90363
+texture_margin_right = 5.02552
+texture_margin_bottom = 3.12699
+region_rect = Rect2(0, 0, 52, 14)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwb87"]
+bg_color = Color(0.0313726, 0.101961, 0.0313726, 1)
+
 [resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 4
+Button/styles/normal = SubResource("StyleBoxTexture_leisi")
+Button/styles/pressed = SubResource("StyleBoxTexture_sd4jv")
+Label/constants/outline_size = 4
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_7jpm8")
+PanelContainer2/base_type = &"PanelContainer"
+PanelContainer2/styles/panel = SubResource("StyleBoxTexture_d6481")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_pwb87")
