@@ -1,13 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpnycfi420qul"]
+[gd_scene load_steps=7 format=3 uid="uid://bpnycfi420qul"]
 
 [ext_resource type="Script" uid="uid://c1i110v08y5oe" path="res://Main/manager/spawner/enemy_spawner.gd" id="1_l5nhv"]
 [ext_resource type="PackedScene" uid="uid://bl8b1afqg0chq" path="res://Main/game_objects/skeleton/skeleton.tscn" id="2_d4mww"]
 [ext_resource type="PackedScene" uid="uid://bkhi5042dqbw1" path="res://Main/game_objects/vampire/vampire.tscn" id="3_k2ii0"]
+[ext_resource type="PackedScene" uid="uid://cb77jvgdfhybc" path="res://Main/game_objects/skeletonv1/skeleton_v_1.tscn" id="4_ri2d8"]
+[ext_resource type="PackedScene" uid="uid://dnme0p85e81ep" path="res://Main/game_objects/Orc/orc.tscn" id="5_ulqmv"]
+[ext_resource type="PackedScene" uid="uid://6665b8372v0t" path="res://Main/game_objects/necromancer/necromancer.tscn" id="6_dq45u"]
 
 [node name="enemy_spawner" type="Node"]
 script = ExtResource("1_l5nhv")
 skeleton_scene = ExtResource("2_d4mww")
 vampire_scene = ExtResource("3_k2ii0")
+skeletonv1_scene = ExtResource("4_ri2d8")
+orc_scene = ExtResource("5_ulqmv")
+necr_scene = ExtResource("6_dq45u")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

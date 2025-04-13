@@ -5,6 +5,9 @@ extends Node
 @export var arena_time_manager: ArenaTimeManager
 @export var skeleton_scene:PackedScene 
 @export var vampire_scene:PackedScene 
+@export var skeletonv1_scene:PackedScene
+@export var orc_scene: PackedScene
+@export var necr_scene: PackedScene
 
 var base_spawn_time
 var min_spawn_time = 0.2
@@ -51,3 +54,9 @@ func on_difficulty_increased(difficulty_level:int):
 	
 	if difficulty_level == 1:
 		enemy_pool.add_mob(vampire_scene, 70)
+		enemy_pool.add_mob(skeletonv1_scene,30)
+		
+	elif difficulty_level == 5:
+		enemy_pool.add_mob(orc_scene,30	)
+	elif difficulty_level == 10:
+		enemy_pool.add_mob(necr_scene,10)

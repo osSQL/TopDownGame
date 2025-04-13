@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmm87temofixi"]
+
+[ext_resource type="Script" uid="uid://bayfahp52qx0k" path="res://Main/Menu/menu.gd" id="1_0hb5d"]
+[ext_resource type="Texture2D" uid="uid://b2ok0666k13sk" path="res://Main/Menu/sky.png" id="1_4cqye"]
+[ext_resource type="Texture2D" uid="uid://dad8xe1jojqjf" path="res://Main/Menu/far-clouds.png" id="2_0hb5d"]
+[ext_resource type="Texture2D" uid="uid://wf1j3xb0g5eq" path="res://Main/Menu/near-clouds.png" id="3_jlxny"]
+[ext_resource type="Texture2D" uid="uid://dloorm7ck1yt0" path="res://Main/Menu/far-mountains.png" id="4_3fuyj"]
+[ext_resource type="Texture2D" uid="uid://d0uqsqoljolhc" path="res://Main/Menu/mountains.png" id="5_x085e"]
+[ext_resource type="Texture2D" uid="uid://wl2on6ailtlh" path="res://Main/Menu/trees.png" id="6_67i4x"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_0hb5d")
+
+[node name="Parallax_bg" type="Node2D" parent="."]
+
+[node name="Sky" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(300, 118)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("1_4cqye")
+
+[node name="Far-clouds" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(352, 122)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("2_0hb5d")
+
+[node name="Far-clouds2" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(534, 118)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("2_0hb5d")
+
+[node name="Far-clouds3" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(112, 120)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("2_0hb5d")
+
+[node name="Near-clouds" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(214, 128)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("3_jlxny")
+
+[node name="Near-clouds2" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(388, 119)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("3_jlxny")
+
+[node name="Far-mountains" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(477, 149)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("4_3fuyj")
+
+[node name="Mountains" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(296, 116)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("5_x085e")
+
+[node name="Trees" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(233, 115)
+scale = Vector2(1.96771, 2.06607)
+texture = ExtResource("6_67i4x")
+
+[node name="Trees2" type="Sprite2D" parent="Parallax_bg"]
+position = Vector2(381, 164)
+rotation = 3.14159
+scale = Vector2(2.67705, -2.08075)
+texture = ExtResource("6_67i4x")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(305, 53)
+scale = Vector2(1705.64, 8.43673)
+zoom = Vector2(1.05, 1.025)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 4.0
+offset_top = 109.0
+offset_right = 125.0
+offset_bottom = 173.0
+
+[node name="play" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(40, 30)
+layout_mode = 2
+text = "Играть"
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(40, 30)
+layout_mode = 2
+text = "Выход 
+"
+
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_button_2_pressed"]
